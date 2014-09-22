@@ -1,0 +1,11 @@
+<h2>Welcome to Sails with Ember</h2>
+
+{{!-- <button {{action "logout"}}>Log Out</button> --}}
+
+{{#if session.isAuthenticated}}
+  <a {{ action 'invalidateSession' }} class="small button">Logout</a>
+{{else}}
+  <a {{ action 'authenticateSession' }} class="small button">Login</a>
+{{/if}}
+
+{{outlet}}

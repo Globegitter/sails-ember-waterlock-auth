@@ -1,0 +1,32 @@
+{{!--<form {{action 'login' on='submit'}} id="loginform">
+  <label for="identification">Login</label>
+  {{input id='email' placeholder='Enter Login' value=email}}
+  <label for="password">Password</label>
+  {{input id='password' placeholder='Enter Password' type='password' value=password}}
+  <button type="submit">Login</button>
+</form>
+
+{{#link-to 'procedures' }}Procedures{{/link-to}} --}}
+
+<form {{action 'authenticate' on='submit'}}>
+  <label for="identification">Login</label>
+  {{input id='identification' placeholder='Enter Login' value=identification}}
+  <label for="password">Password</label>
+  {{input id='password' placeholder='Enter Password' type='password' value=password}}
+  <button type="submit">Login</button>
+</form>
+
+
+{{!-- 
+{{#if session.isAuthenticated}}
+    <p>YOUR IN!</p>
+{{else}}
+    <p>YOUR OUT!</p>
+{{/if}} --}}
+
+{{!-- 
+<form name="input" action="http://localhost:1337/api/v1/auths/login" method="post">
+Username: <input type="text" name="email">
+Password: <input type="password" name="password">
+<input type="submit" value="Submit">
+</form> --}}
